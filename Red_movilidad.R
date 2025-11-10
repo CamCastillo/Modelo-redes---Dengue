@@ -7,7 +7,7 @@ library(tsna)
 
 
 # Lectura  del dataset 
-datos <- fread("yjmob100k-dataset2.csv.gz")
+datos <- fread("yjmob100k-dataset1.csv.gz")
 setnames(datos, c("uid", "d", "t", "x", "y"), 
          c("persona_id", "dia", "timeslot", "coord_x", "coord_y"))
 
@@ -114,4 +114,5 @@ fwrite(flujos_agregados, "flujos_agregados.csv")
 cat("\nArchivos exportados:\n")
 cat("- red_movilidad_completa.rds (red para modelación)\n")
 cat("- flujos_agregados.csv (datos brutos de flujos)\n")
+
 
